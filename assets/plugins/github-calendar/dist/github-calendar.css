@@ -1,0 +1,203 @@
+.calendar {
+    width: 750px;
+    font-family: Helvetica, arial;
+    border: 1px solid #DDDDDD;
+    border-radius: 3px;
+    min-height: 243px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.calendar-graph text.wday,
+.calendar-graph text.month {
+    font-size: 10px;
+    fill: #aaa;
+}
+
+.contrib-legend {
+    text-align: right;
+    padding: 0 14px 10px 0;
+    display: inline-block;
+    float: right;
+}
+
+.contrib-legend .legend {
+    display: inline-block;
+    list-style: none;
+    margin: 0 5px;
+    position: relative;
+    bottom: -1px;
+    padding: 0;
+}
+
+.contrib-legend .legend li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+}
+
+.text-small {
+    font-size: 12px;
+    color: #767676;
+}
+
+.calendar-graph {
+    padding: 5px 0 0;
+    height: 126px;
+    text-align: center;
+}
+
+.contrib-column {
+    padding: 15px 0;
+    text-align: center;
+    border-left: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    font-size: 11px;
+}
+
+.contrib-column-first {
+    border-left: 0;
+}
+
+.table-column {
+    display: table-cell;
+    width: 1%;
+    padding-right: 10px;
+    padding-left: 10px;
+    vertical-align: top;
+}
+
+.contrib-number {
+    font-weight: 300;
+    line-height: 1.3em;
+    font-size: 24px;
+    display: block;
+    color: #333;
+}
+
+.calendar img.spinner {
+    width: 70px;
+    margin-top: 50px;
+    min-height: 70px;
+}
+
+.monospace {
+    text-align: center;
+    color: #000;
+    font-family: monospace;
+}
+
+.monospace a {
+    color: #1D75AB;
+    text-decoration: none;
+}
+
+.contrib-footer {
+    font-size: 11px;
+    padding: 0 10px 12px;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+    height: 26px;
+}
+
+.left.text-muted {
+    float: left;
+    margin-left: 9px;
+    color: #767676;
+}
+.left.text-muted a {
+    color: #4078c0;
+    text-decoration: none;
+}
+.left.text-muted a:hover,
+.monospace a:hover {
+    text-decoration: underline;
+}
+
+.ShowOnMobile{ display:none;}
+.ShowOnDesktop{ display:inherit;}
+
+@media (min-width: 960px){
+    .ContainerIndent{margin:8px 10px;}
+
+    /*visibilities according to the platform*/
+    .ShowOnMobile{display:none; opacity:0;}
+    .ShowOnDesktop{display:inherit; opacity:1;}
+}
+
+@media (min-width: 960px) and (max-width:1200px){
+    /* responsive support */
+    .Responsive{width:33.3%; float:left; margin-left:0px !important; margin-right:0px !important;}
+    .Responsive50{width:50%; float:left; margin-left:0px !important; margin-right:0px !important;}
+    .Responsive100{width:100%; float:left; margin-left:0px !important; margin-right:0px !important;}
+
+    /* make auto of element width attribute on mobile devices with media queries */
+    .WidAutoOnMobile{width:auto !important;}
+    .HeiAutoOnMobile{height:auto !important; min-height:50px !important;}
+} 
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 640px) and (max-width: 960px) {	
+    .span3 {width: 45%;}
+    .ContainerIndent{margin:6px 8px;}
+
+    /*visibilities according to the platform*/
+    .ShowOnMobile{display:inherit; opacity:1;}
+    .ShowOnDesktop{display:none; opacity:0;}
+    .FloatNoneOnMobile{float:none !important;}
+
+    /* responsive support */
+    .Responsive{width:50%; float:left; margin-left:0px !important; margin-right:0px !important;}
+    .Responsive50{width:100%; float:left; margin-left:0px !important; margin-right:0px !important;}
+    .Responsive100{width:100%; float:left; margin-left:0px !important; margin-right:0px !important;}
+
+    /* make auto of element width attribute on mobile devices with media queries */
+    .WidAutoOnMobile{width:auto !important;}
+    .HeiAutoOnMobile{height:auto !important; min-height:50px !important;}
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 640px) {									  
+    .ContainerIndent{margin:6px 8px;}
+    .DisplayOnResponsive{display:block; float:right;}
+
+    /*visibilities according to the platform*/
+    .ShowOnMobile{display:inherit; opacity:1;}
+    .ShowOnDesktop{display:none; opacity:0;}
+    .FloatNoneOnMobile{float:none !important;}
+
+    /* responsive support */
+    .Responsive{width:100%; float:left; margin-left:0px !important; margin-right:0px !important;}
+    .Responsive50{width:100%; float:left; margin-left:0px !important; margin-right:0px !important;}
+    .Responsive100{width:100%; float:left; margin-left:0px !important; margin-right:0px !important;}
+
+    /* make auto of element width attribute on mobile devices with media queries */
+    .WidAutoOnMobile{width:auto !important;}
+    .HeiAutoOnMobile{height:auto !important; min-height:50px !important;}
+}
+
+/* Portrait phones and down */
+@media (max-width: 480px) {
+    .span3 {width: 90%;}	
+    .ContainerIndent{margin:16px 8px 0px 8px;}
+
+    /*visibilities according to the platform*/
+    .ShowOnMobile{display:inherit; opacity:1;}
+    .ShowOnDesktop{display:none; opacity:0;}
+    .FloatNoneOnMobile{float:none !important;}
+
+    /* responsive support */
+    .Responsive{width:100%; float:left; margin-left:0px !important; margin-right:0px !important;}
+    .Responsive50{width:100%; float:left; margin-left:0px !important; margin-right:0px !important;}
+    .Responsive100{width:100%; float:left; margin-left:0px !important; margin-right:0px !important;}
+
+    /* make auto of element width attribute on mobile devices with media queries */
+    .WidAutoOnMobile{width:auto !important;}
+    .HeiAutoOnMobile{height:auto !important; min-height:50px !important;}
+}
+
+/* Landscape phones */
+@media (min-height:200px) and (max-height:500px) and (max-width:960px){
+
+}
