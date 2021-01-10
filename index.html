@@ -32,15 +32,12 @@
     <!-- Plugins CSS -->
     <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
 
-    <!-- github calendar css -->
-    <link rel="stylesheet" href="assets/plugins/github-calendar/dist/github-calendar.css" />
-    <!-- github acitivity css -->
-    <link rel="stylesheet" href="assets/plugins/github-activity/src/github-activity.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
 
     <!-- Theme CSS -->
     <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="font-awesome-animation.min.css">
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -345,6 +342,31 @@
                     <!--//section-inner-->
                 </section>
                 <!--//section-->
+                <section class="github section">
+                    <div class="section-inner">
+                        <h2 class="heading">My GitHub
+                            <i class="fa fa-github" style="font-size: 50px"></i>
+                        </h2>
+                        <!-- Include the library. -->
+                        <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
+
+                        <!-- Optionally, include the theme (if you don't want to struggle to write the CSS) -->
+                        <link rel="stylesheet"
+                            href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css" />
+
+                        <!-- Prepare a container for your calendar. -->
+                        <div class="calendar">
+                            <!-- Loading stuff -->
+                            Loading the data just for you.
+                        </div>
+
+                        <script>
+                            GitHubCalendar(".calendar", "mariofelesdossantosjunior", {
+                                responsive: true
+                            });
+                        </script>
+                    </div>
+                </section>
             </div>
             <!--//primary-->
 
@@ -684,73 +706,8 @@
 
             </div>
             <!--//secondary-->
-
-            <!-- TAG GITHUB-->
-            <div class="col-xs-12 ShowOnDesktop">
-                <section class="github section">
-                    <div class="section-inner" style="padding: 30px;">
-                        <h2 class="heading">My GitHub
-                            <i class="fa fa-github" style="font-size: 50px"></i>
-                        </h2>
-                        <p>My GitHub Calendar
-                            <a href="https://github.com/mariofelesdossantosjunior" target="_blank">GitHub Calendar</a>
-                            <script
-                                src="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.min.js">
-                            </script>
-                            <link rel="stylesheet"
-                                href="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.css" />
-                        <div class="calendar" style="width: 95%"></div>
-                        <div class="padding" style="width: 95%">
-                            <script>
-                                GitHubCalendar(".calendar", "mariofelesdossantosjunior");
-                            </script>
-                        </div>
-                    </div>
-                </section>
-            </div>
-            <div class="col-xs-12 ShowOnMobile">
-                <section class="github section">
-                    <div class="section-inner" style="padding: 30px;">
-                        <h2 class="heading">My GitHub
-                            <i class="fa fa-github" style="font-size: 50px"></i>
-                        </h2>
-                        <!-- Include the library. -->
-                        <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js">
-                        </script>
-
-                        <!-- Optionally, include the theme (if you don't want to struggle to write the CSS) -->
-                        <link rel="stylesheet"
-                            href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css" />
-
-                        <!-- Prepare a container for your calendar. -->
-                        <div class="calendar">
-                            <!-- Loading stuff -->
-                            Loading the data just for you.
-                        </div>
-
-                        <script>
-                            GitHubCalendar(".calendar", "mariofelesdossantosjunior");
-
-                            // or enable responsive functionality:
-                            GitHubCalendar(".calendar", "mariofelesdossantosjunior", {
-                                responsive: true
-                            });
-
-                            // Use a proxy
-                            GitHubCalendar(".calendar", "mariofelesdossantosjunior", {
-                                proxy(username) {
-                                    return fetch(`https://your-proxy.com/github?user=${username}`)
-                                }
-                            }).then(r => r.text())
-                        </script>
-                    </div>
-                </section>
-            </div>
-
         </div>
-        <!--//row-->
     </div>
-    <!--//masonry-->
 
     <!-- ******FOOTER****** -->
     <footer class="footer">
@@ -765,6 +722,7 @@
     <!--//footer-->
 
     <!-- Javascript -->
+    <!-- Include the library. -->
     <script type="text/javascript" src="assets/plugins/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="assets/plugins/jquery-rss/dist/jquery.rss.min.js"></script>
@@ -772,10 +730,8 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/3.0.2/es6-promise.min.js">
     </script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fetch/0.10.1/fetch.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/github-calendar/dist/github-calendar.min.js"></script>
     <!-- github activity plugin -->
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/github-activity/src/github-activity.js"></script>
     <!-- custom js -->
     <script type="text/javascript" src="assets/js/main.js"></script>
 </body>
